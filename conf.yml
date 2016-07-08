@@ -1,0 +1,5 @@
+koa-favicon:
+  path: "sss"
+  options:
+    maxAge: 1
+koa-etag:
