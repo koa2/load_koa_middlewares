@@ -7,6 +7,8 @@ support
 - config.json
 - config.yml 
 
+[![NPM version](https://img.shields.io/npm/v/load_koa_middlewares.svg?style=flat-square)](https://www.npmjs.com/package/load_koa_middlewares)
+
 ## Install
 
 ```
