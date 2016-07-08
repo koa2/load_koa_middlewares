@@ -48,3 +48,44 @@ app.use((ctx, next)=>{
 app.listen(3005);
 
 ```
+
+prepare dependencies
+
+```
+    "koa": "^2.0.0",
+    "koa-etag": "^3.0.0",
+    "koa-favicon": "^2.0.0"
+```
+
+## Configuration
+
+support 
+
+- config.json
+- config.yml 
+
+### config.json
+
+```
+{
+  "koa-favicon": {
+    "path": "sss",
+    "options": {
+      "maxAge": 1
+    }
+  },
+  "koa-etag":{
+    
+  }
+}
+```
+
+### config.yml
+
+```
+koa-favicon:
+  path: "sss"
+  options:
+    maxAge: 1
+koa-etag:
+```
