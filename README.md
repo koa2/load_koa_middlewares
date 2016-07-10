@@ -61,8 +61,42 @@ prepare dependencies
 
 support 
 
+- config.js
 - config.json
 - config.yml 
+
+### config.js
+
+https://github.com/koa2/koa2-common/blob/master/conf.js
+
+the most powerful configuration.
+
+```
+module.exports = { 
+  "koa-compress":{
+    filter: function (content_type) {
+      return /text/i.test(content_type)
+    },
+    threshold: 2048,
+    flush: require('zlib').Z_SYNC_FLUSH
+  },
+  "koa-favicon": {
+    "path": "sss",
+    "options": {
+      "maxAge": 1
+    }
+  },
+  "koa-conditional-get":{
+    
+  },
+  "koa-etag":{
+    
+  }
+  
+}
+```
+
+can be support all js as config
 
 ### config.json
 
