@@ -123,3 +123,7 @@ koa-favicon:
     maxAge: 1
 koa-etag:
 ```
+
+## which project use me?
+
+- https://github.com/koa2/koa2-common
