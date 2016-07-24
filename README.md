@@ -124,6 +124,10 @@ koa-favicon:
 koa-etag:
 ```
 
-## which project use me?
+## Which project use me?
 
 - https://github.com/koa2/koa2-common
+
+## Similar Project
+
+- https://github.com/krakenjs/kraken-js
