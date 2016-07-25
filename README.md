@@ -4,6 +4,7 @@ load koa 2.x middlewares from configuration
 
 support 
 
+- config.js(recommend)
 - config.json
 - config.yml 
 
@@ -209,4 +210,3 @@ koa-etag:
 
 this repo is released under the [MIT
 License](http://www.opensource.org/licenses/MIT).
-
