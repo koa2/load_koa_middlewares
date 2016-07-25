@@ -316,6 +316,57 @@ config_obj = YAML.load(file);
 
 至此就完成了所有设计。
 
+## 能否让这些中间件的配置丢到package.json里呢？
+
+类似于gitbook的设计。
+
+- 特别复杂的中间件配置必须在js里，json里是无法完成的。于是有了jwf和get_closest_package_json
+- 改在load_koa_middlewares，接受参数为2种：file 或配置对象
+- 使用get_closest_package_json和load_koa_middlewares封装成load_koa_middlewares_with_key 
+
+Install
+
+```
+$ npm i -S load_koa_middlewares_with_key
+```
+
+Usages
+
+```
+app.use(require('load_koa_middlewares_with_key')())
+```
+
+or
+
+```
+app.use(require('load_koa_middlewares_with_key')('config'))
+```
+
+config in package.json
+
+
+```
+  "config": {
+    "koa-favicon": {
+      "path": "sss",
+      "options": {
+        "maxAge": 1
+      }
+    },
+    "koa-etag": {}
+  },
+```
+
+## All
+
+- load_koa_middlewares_with_key在package.json里配置中间件
+  - get_closest_package_json 支持jwf解析的package.json
+    - jwf如果配置项里有文件，直接读取
+  - load_koa_middlewares使用配置文件加载中间件
+    - koa_middlewares_with_config根据配置对象加载中间件
+      - call_module_with_config根据配置调用模块
+        - call_with_config把参数改成配置项，然后调用
+
 ## 总结
 
 中间件定义
