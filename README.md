@@ -10,6 +10,8 @@ support
 
 [![NPM version](https://img.shields.io/npm/v/load_koa_middlewares.svg?style=flat-square)](https://www.npmjs.com/package/load_koa_middlewares)
 
+[doc](https://github.com/i5ting/load_koa_middlewares/blob/master/README.zh.md)
+
 ## Install
 
 ```
